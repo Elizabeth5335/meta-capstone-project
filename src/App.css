@@ -274,7 +274,7 @@ footer {
   }
   section,
   .flex,
-  .card-list {
+  .card-list, footer {
     flex-direction: column;
   }
 
@@ -316,4 +316,54 @@ footer {
       display: none;
     }
   }
+  form{
+    width: calc(100%  - 4rem) !important;
+    margin: 2rem !important;
+  }
+}
+
+form {
+  display: grid;
+  width: 50%;
+  max-width: 400px;
+  gap: 20px;
+  margin: 2rem auto;
+}
+
+label {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"],
+select {
+  padding: 8px;
+  border: 1px solid var(--secondary-dark);
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+select {
+  background-color: var(--secondary-light);
+}
+
+option{
+  font-size: 1rem;
+  background-color: var(--secondary-light);
+}
+
+option:focus-within{
+  background-color: #495e57;
+}
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--secondary-light);
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secondary-dark);
 }
