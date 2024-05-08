@@ -4,7 +4,7 @@ import logo from "../icons_assets/Logo.svg"
 function Header() {
   return (
     <header>
-        <img src={logo} alt="logo"/>
+        <a href="/"><img src={logo} alt="logo"/></a>
       <Navigation />
     </header>
   );

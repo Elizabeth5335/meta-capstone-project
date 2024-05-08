@@ -1,8 +1,9 @@
 import Navigation from "./Navigation";
-
+import logo from "../icons_assets/Logo .svg"
 function Footer() {
   return (
     <footer>
+        <img src={logo} alt="logo"/>
       <Navigation />
       <ul>
         <li>

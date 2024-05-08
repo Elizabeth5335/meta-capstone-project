@@ -3,7 +3,7 @@ function Navigation() {
     <nav>
       <ul>
         <li>
-          <a href="/home">HOME</a>
+          <a href="/">HOME</a>
         </li>
 
         <li>
@@ -13,7 +13,7 @@ function Navigation() {
           <a href="/menu">MENU</a>
         </li>
         <li>
-          <a href="/reservations">RESERVATIONS</a>
+          <a href="/reservation">RESERVE TABLE</a>
         </li>
         <li>
           <a href="/order-online">ORDER ONLINE</a>
