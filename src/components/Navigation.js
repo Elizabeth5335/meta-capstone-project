@@ -12,7 +12,6 @@ function Navigation() {
   return (
     <nav>
       <div className={`hamburger`} onClick={handleClick}>{showMenu ? "X" : "|||"}</div>
-      {/* <div className={`hamburger ${showMenu ? "" : "hide"}`} onClick={handleClick}>X</div> */}
       <ul className={showMenu ? "show" : ""}>
         <li>
           <Link to="/">HOME</Link>

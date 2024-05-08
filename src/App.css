@@ -367,3 +367,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: var(--secondary-dark);
 }
+
+.confirmed{
+  text-align: center;
+}
+
+.confirmed-text{
+  color: var(--primary-color);
+
+}
