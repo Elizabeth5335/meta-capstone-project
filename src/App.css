@@ -213,7 +213,6 @@ main section .container {
   align-items: center;
   margin: auto;
   max-width: 1024px;
-  /* text-align: center; */
   display: flex;
   margin-top: 2rem;
   .about-description {
@@ -239,7 +238,82 @@ footer {
   a:hover {
     text-decoration: underline;
   }
-  ul{
+  ul {
     list-style: none;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 756px) {
+  header nav ul,
+  .hero-image {
+    display: none;
+  }
+
+  .show {
+    display: block !important;
+  }
+
+  .hide {
+    display: none !important;
+  }
+  header .hamburger {
+    display: block;
+  }
+
+  .hero {
+    margin-bottom: 0 !important;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  .hero-content {
+    justify-content: center !important;
+  }
+  section,
+  .flex,
+  .card-list {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 1rem auto;
+  }
+
+  .about-image {
+    width: 100% !important;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  header {
+    .hamburger {
+      text-align: right;
+    }
+    .hamburger.hide {
+      display: none;
+    }
+
+    .hamburger.show {
+      display: none;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
+    }
+
+    ul.show {
+      display: block;
+    }
+
+    ul.hide {
+      display: none;
+    }
   }
 }

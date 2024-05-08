@@ -1,9 +1,19 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 function Navigation() {
+
+  const [showMenu, setShowMenu] = React.useState(false);
+
+  function handleClick(){
+    if(window.innerWidth < 756) setShowMenu(prev => !prev)
+  }
+
   return (
     <nav>
-      <ul>
+      <div className={`hamburger`} onClick={handleClick}>{showMenu ? "X" : "|||"}</div>
+      {/* <div className={`hamburger ${showMenu ? "" : "hide"}`} onClick={handleClick}>X</div> */}
+      <ul className={showMenu ? "show" : ""}>
         <li>
           <Link to="/">HOME</Link>
         </li>
