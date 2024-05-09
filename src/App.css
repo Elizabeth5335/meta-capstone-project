@@ -337,6 +337,7 @@ label {
 
 input[type="date"],
 input[type="number"],
+input,
 select {
   padding: 8px;
   border: 1px solid var(--secondary-dark);
@@ -375,4 +376,14 @@ input[type="submit"]:hover {
 .confirmed-text{
   color: var(--primary-color);
 
+}
+
+.contact-info-heading{
+  color: var(--primary-color);
+  /* padding-top: 2rem; */
+  text-align: center;
+}
+
+.error{
+  color: red;
 }
