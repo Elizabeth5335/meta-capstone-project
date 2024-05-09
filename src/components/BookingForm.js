@@ -14,7 +14,10 @@ function BookingForm(props) {
 
   function validatePhone() {
     if (
-      !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone) && phone.trim()
+      !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(
+        phone
+      ) &&
+      phone.trim()
     ) {
       setFormErrors((prev) => ({
         ...prev,
@@ -104,7 +107,6 @@ function BookingForm(props) {
       }}
     >
       <h2 className="contact-info-heading">Booking details</h2>
-
       <label htmlFor="res-date">Choose date *</label>
       <input
         required
@@ -113,7 +115,7 @@ function BookingForm(props) {
         value={date}
         onChange={(e) => {
           setDate(e.target.value);
-          props.setAvailableTimes();
+          props?.setAvailableTimes(date);
           validateDate(e);
         }}
         onBlur={validateDate}
@@ -129,7 +131,7 @@ function BookingForm(props) {
           setTime(e.target.value);
         }}
       >
-        {props.availableTimes.map((timeSlot) => (
+        {props.availableTimes?.map((timeSlot) => (
           <option key={timeSlot}>{timeSlot}</option>
         ))}
       </select>

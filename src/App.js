@@ -16,7 +16,7 @@ function App() {
   );
 
   function updateTimes(date) {
-    return availableTimes;
+    setAvailableTimes(fetchAPI(date ? new Date(date) : new Date()));
   }
 
   function updateTimes(state, action) {
@@ -24,12 +24,8 @@ function App() {
       return newTimes;
   }
 
-  React.useEffect(()=>{
-    console.log(fetchAPI(new Date()));
-  }, [])
-
   function initializeTimes(date) {
-    return fetchAPI(new Date())
+    return fetchAPI(date ? new Date(date) : new Date())
   }
   const navigate = useNavigate();
 
@@ -40,7 +36,7 @@ function App() {
       navigate('/success');
     }
   }
-  
+
 
   return (
     <>
